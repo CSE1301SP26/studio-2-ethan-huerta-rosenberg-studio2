@@ -6,15 +6,17 @@ public class Pi {
         System.out.println("Enter the number of terms to approximate Pi: ");
         int terms = input.nextInt();
         double piApproximation;
-
+        int count=0;
+        100
         for (int i=0; i<terms; i++) {
            double x =  Math.random();
            double y = Math.random();
             double radius = Math.sqrt((x*x) + (y*y));
               if (radius <= 1) {
-                piApproximation = 4.0 / (2*radius);
-                System.out.println("Approximation of Pi after " + (i+1) + " terms: " + piApproximation);
+                count++;
         }
     }
+    double piEstimate = 4.0 * count / terms;
+    System.out.println("Approximation of Pi after " + terms + " terms: " + piEstimate);
 }
 }
